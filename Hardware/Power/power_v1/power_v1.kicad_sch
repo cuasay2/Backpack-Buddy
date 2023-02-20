@@ -2304,7 +2304,7 @@
     (property "Reference" "TP3" (id 0) (at 146.05 29.21 0)
       (effects (font (size 1.27 1.27)) (justify left top))
     )
-    (property "Value" "Protected 12V" (id 1) (at 139.7 27.94 0)
+    (property "Value" "Protected 9V" (id 1) (at 139.7 27.94 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
     (property "Footprint" "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm" (id 2) (at 152.4 35.56 0)
@@ -2895,7 +2895,7 @@
       (reference "TP2") (unit 1) (value "GND") (footprint "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm")
     )
     (path "/68ad6556-9956-45af-aca6-c9662c8c707b"
-      (reference "TP3") (unit 1) (value "Protected 12V") (footprint "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm")
+      (reference "TP3") (unit 1) (value "Protected 9V") (footprint "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm")
     )
     (path "/fc2f62c7-6aa4-448b-864e-c94828d41f5f"
       (reference "TP4") (unit 1) (value "3V3") (footprint "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm")
