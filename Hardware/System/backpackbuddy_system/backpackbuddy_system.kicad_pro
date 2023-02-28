@@ -328,6 +328,10 @@
     [
       "cf3dbeef-e165-4b09-9181-2cdb640e2044",
       "usb"
+    ],
+    [
+      "31ba9691-809e-422e-95e0-c0a31dc5a8d2",
+      "Power"
     ]
   ],
   "text_variables": {}
