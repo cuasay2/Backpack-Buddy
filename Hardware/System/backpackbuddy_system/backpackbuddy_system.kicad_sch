@@ -945,7 +945,7 @@
     (stroke (width 0) (type default) (color 0 0 0 0))
     (uuid 5933ed68-e8d3-4beb-8fc6-db9704c6b05d)
   )
-  (wire (pts (xy 165.1 93.98) (xy 194.31 93.98))
+  (wire (pts (xy 157.48 93.98) (xy 194.31 93.98))
     (stroke (width 0) (type default) (color 0 0 0 0))
     (uuid 5a570126-ba4d-40c5-9c5a-7de5eeb6e840)
   )
@@ -1045,7 +1045,7 @@
     (stroke (width 0) (type default) (color 0 0 0 0))
     (uuid a53b7718-b2a6-4a06-a3e8-52d6fd6ca725)
   )
-  (wire (pts (xy 165.1 91.44) (xy 194.31 91.44))
+  (wire (pts (xy 157.48 91.44) (xy 194.31 91.44))
     (stroke (width 0) (type default) (color 0 0 0 0))
     (uuid a84004e7-39d7-4c9f-88e2-dce82302922d)
   )
@@ -1185,10 +1185,6 @@
   (text "Debug LEDs" (at 48.26 111.76 0)
     (effects (font (size 3 3)) (justify left bottom))
     (uuid 1b62be16-3db1-48a5-9d94-e20f6a8823d3)
-  )
-  (text "Could be RX/TX or GPIO\n" (at 165.1 93.98 0)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid b8d48b55-1257-406e-9978-9e317c25d43d)
   )
 
   (symbol (lib_id "Device:LED") (at 55.88 91.44 90) (unit 1)
@@ -2117,6 +2113,14 @@
       (effects (font (size 1.27 1.27)) (justify left))
       (uuid 62c8d159-0cc4-4c3e-bc32-c9181fd3ad07)
     )
+    (pin "PD6" bidirectional (at 157.48 91.44 0)
+      (effects (font (size 1.27 1.27)) (justify right))
+      (uuid d3551467-2db9-430b-a3af-bc4d78fcddbe)
+    )
+    (pin "PD7" bidirectional (at 157.48 93.98 0)
+      (effects (font (size 1.27 1.27)) (justify right))
+      (uuid 35441368-7ce4-43fc-8adb-23dbfc12bd86)
+    )
   )
 
   (sheet (at 95.25 72.39) (size 12.7 15.24) (fields_autoplaced)
@@ -2234,9 +2238,6 @@
     (path "/af61f2eb-3376-4189-8310-620a433ef8ef/35f4f904-c0bb-4afc-955f-a5d457401c48"
       (reference "#PWR025") (unit 1) (value "GND") (footprint "")
     )
-    (path "/cf3dbeef-e165-4b09-9181-2cdb640e2044/41aa3b43-a32d-49f1-9c0a-fe36fcc9cd50"
-      (reference "#PWR026") (unit 1) (value "GND") (footprint "")
-    )
     (path "/cf3dbeef-e165-4b09-9181-2cdb640e2044/983c869c-c01c-488c-ba8e-beda3e8d1dbf"
       (reference "#PWR027") (unit 1) (value "+5V") (footprint "")
     )
@@ -2291,6 +2292,9 @@
     (path "/18aee7fa-ee8c-41de-a1b2-ab9ca8307dd1"
       (reference "#PWR0104") (unit 1) (value "GND") (footprint "")
     )
+    (path "/cf3dbeef-e165-4b09-9181-2cdb640e2044/6bf6a062-8950-4778-8e5f-ae7862f66350"
+      (reference "#PWR0105") (unit 1) (value "GND") (footprint "")
+    )
     (path "/af61f2eb-3376-4189-8310-620a433ef8ef/f4662e9e-a042-421d-9aa3-93a911a6004a"
       (reference "C1") (unit 1) (value "10pF") (footprint "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder")
     )
@@ -2337,7 +2341,7 @@
       (reference "C15") (unit 1) (value "33uF") (footprint "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder")
     )
     (path "/af61f2eb-3376-4189-8310-620a433ef8ef/1d374c9e-2897-4c07-9d24-38daf6ec840d"
-      (reference "D1") (unit 1) (value "D") (footprint "")
+      (reference "D1") (unit 1) (value "50V") (footprint "Diode_SMD:D_SMB_Handsoldering")
     )
     (path "/31ba9691-809e-422e-95e0-c0a31dc5a8d2/61a90e4c-652d-4272-97e6-7c934e05c72d"
       (reference "D2") (unit 1) (value "S602TS") (footprint "Package_TO_SOT_SMD:SOT-223-3_TabPin2")
@@ -2405,11 +2409,14 @@
     (path "/8d3fe861-5cb2-473a-9f7d-81f2bccf2442"
       (reference "J9") (unit 1) (value "Right Vibration 2") (footprint "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical")
     )
-    (path "/cf3dbeef-e165-4b09-9181-2cdb640e2044/3c9e1b60-734c-46b8-9d3d-6f93dd757851"
+    (path "/cf3dbeef-e165-4b09-9181-2cdb640e2044/db6c9d55-56d9-4594-900d-df9a65a357a3"
       (reference "J10") (unit 1) (value "USB_B_Micro") (footprint "Connector_USB:USB_Micro-B_Molex_47346-0001")
     )
     (path "/31ba9691-809e-422e-95e0-c0a31dc5a8d2/12649009-7fa5-45ae-94be-e62b9e763213"
       (reference "J11") (unit 1) (value "Battery") (footprint "Connector_Molex:Molex_KK-254_AE-6410-03A_1x03_P2.54mm_Vertical")
+    )
+    (path "/31ba9691-809e-422e-95e0-c0a31dc5a8d2/9ea34af7-405e-4360-b874-9b4cc86b0744"
+      (reference "JP1") (unit 1) (value "SolderJumper_2_Open") (footprint "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm")
     )
     (path "/31ba9691-809e-422e-95e0-c0a31dc5a8d2/25c24f9c-10e4-491d-ae1c-d8d731fa9c2b"
       (reference "L1") (unit 1) (value "56uH") (footprint "BackpackBuddyFootprintLibrary:Inductor_IHLP6767GZER560M11")
