@@ -2758,10 +2758,10 @@
     (path "/31ba9691-809e-422e-95e0-c0a31dc5a8d2/e64fa4ee-b829-42de-9804-1e385ca04e92"
       (reference "U2") (unit 1) (value "SI-8050Y") (footprint "Package_TO_SOT_THT:TO-220F-7_P2.54x3.7mm_StaggerEven_Lead3.5mm_Vertical")
     )
-    (path "/31ba9691-809e-422e-95e0-c0a31dc5a8d2/bad7d67f-be6c-4c30-a0ac-06b8c1a2c21c"
+    (path "/31ba9691-809e-422e-95e0-c0a31dc5a8d2/ede80d23-0874-444b-8f0f-e3b44f44baf5"
       (reference "U3") (unit 1) (value "LM3940") (footprint "Package_TO_SOT_SMD:SOT-223")
     )
-    (path "/af61f2eb-3376-4189-8310-620a433ef8ef/63bea05e-fc77-43c2-a8c6-2e4d90ff707f"
+    (path "/af61f2eb-3376-4189-8310-620a433ef8ef/467b3a30-c596-4deb-a8f6-f9be23d2bd1f"
       (reference "Y1") (unit 1) (value "16MHz") (footprint "Crystal:Crystal_SMD_3225-4Pin_3.2x2.5mm_HandSoldering")
     )
   )
