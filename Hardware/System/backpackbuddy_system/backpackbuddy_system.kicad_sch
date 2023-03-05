@@ -2587,13 +2587,13 @@
       (reference "D2") (unit 1) (value "S602TS") (footprint "Package_TO_SOT_SMD:SOT-223-3_TabPin2")
     )
     (path "/31ba9691-809e-422e-95e0-c0a31dc5a8d2/70ace144-52b4-4c00-b794-f6109f8a9315"
-      (reference "D3") (unit 1) (value "10V") (footprint "Diode_SMD:D_SOD-123F")
+      (reference "D3") (unit 1) (value "20V") (footprint "Diode_SMD:D_SOD-123F")
     )
     (path "/31ba9691-809e-422e-95e0-c0a31dc5a8d2/5ca5ff5c-f736-4e48-8091-3426c26b9de1"
       (reference "D4") (unit 1) (value "FMW-2156") (footprint "Package_TO_SOT_THT:TO-220-3_Vertical")
     )
     (path "/31ba9691-809e-422e-95e0-c0a31dc5a8d2/8f38b91c-65f9-4d53-91d9-faeca716b5b2"
-      (reference "D5") (unit 1) (value "18V") (footprint "Diode_SMD:D_SOD-123F")
+      (reference "D5") (unit 1) (value "27V") (footprint "Diode_SMD:D_SOD-123F")
     )
     (path "/31ba9691-809e-422e-95e0-c0a31dc5a8d2/891776ff-686f-4c2b-b780-fd356c29519d"
       (reference "D6") (unit 1) (value "Red") (footprint "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder")
