@@ -2807,7 +2807,7 @@
     (property "MPN" "CAP CER 0.1UF 50V X7R 0603" (id 4) (at 115.57 90.17 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Stock" "https://www.digikey.com/en/products/detail/kemet/C0603C104K5RAC7867/1465623?utm_adgroup=Ceramic%20Capacitors&utm_source=google&utm_medium=cpc&utm_campaign=Shopping_Product_Capacitors_NEW&utm_term=&utm_content=Ceramic%20Capacitors" (id 5) (at 115.57 90.17 0)
+    (property "Stock" "https://www.digikey.com/en/products/detail/kemet/C0603C104K5RAC3190/12701955?utm_adgroup=Capacitors&utm_source=google&utm_medium=cpc&utm_campaign=Shopping_Supplier_KEMET&utm_term=&utm_content=Capacitors" (id 5) (at 115.57 90.17 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 24eb8e48-bec9-4ab2-82f8-566e1c98815c))

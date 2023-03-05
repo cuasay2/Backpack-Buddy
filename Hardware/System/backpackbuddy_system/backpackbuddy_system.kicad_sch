@@ -2536,6 +2536,12 @@
     (path "/24694138-69a7-4d98-a128-6549f6c32771"
       (reference "#PWR0106") (unit 1) (value "GND") (footprint "")
     )
+    (path "/af61f2eb-3376-4189-8310-620a433ef8ef/7690855f-4246-4626-9a09-1762a09f4e35"
+      (reference "#PWR0107") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/af61f2eb-3376-4189-8310-620a433ef8ef/69492b5c-ad3f-4dc4-a024-17dc90b589b4"
+      (reference "#PWR0108") (unit 1) (value "GND") (footprint "")
+    )
     (path "/af61f2eb-3376-4189-8310-620a433ef8ef/f4662e9e-a042-421d-9aa3-93a911a6004a"
       (reference "C1") (unit 1) (value "10pF") (footprint "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder")
     )
