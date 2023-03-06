@@ -2784,6 +2784,15 @@
     (path "/af61f2eb-3376-4189-8310-620a433ef8ef/ada6c307-c097-4ef0-ba6a-1021c2fd8eeb"
       (reference "#PWR042") (unit 1) (value "GND") (footprint "")
     )
+    (path "/b75bd9b9-3a6b-4766-98aa-3c30f703f2e0/efdc2b70-d71d-4565-b070-b587ff9c968d"
+      (reference "#PWR043") (unit 1) (value "+5V") (footprint "")
+    )
+    (path "/b75bd9b9-3a6b-4766-98aa-3c30f703f2e0/034e48a5-ec32-46dc-affb-6b2bc8040914"
+      (reference "#PWR044") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/b75bd9b9-3a6b-4766-98aa-3c30f703f2e0/d71652a3-32ad-4852-90a1-6861b982b5b9"
+      (reference "#PWR045") (unit 1) (value "+3V3") (footprint "")
+    )
     (path "/15f26858-c99e-45c6-b913-2cb000cc46f0"
       (reference "#PWR0101") (unit 1) (value "GND") (footprint "")
     )
@@ -2813,15 +2822,6 @@
     )
     (path "/84a05bf1-ce71-4948-ba13-097fcbc1e06a"
       (reference "#PWR0110") (unit 1) (value "+3V3") (footprint "")
-    )
-    (path "/b75bd9b9-3a6b-4766-98aa-3c30f703f2e0/034e48a5-ec32-46dc-affb-6b2bc8040914"
-      (reference "#PWR?") (unit 1) (value "GND") (footprint "")
-    )
-    (path "/b75bd9b9-3a6b-4766-98aa-3c30f703f2e0/d71652a3-32ad-4852-90a1-6861b982b5b9"
-      (reference "#PWR?") (unit 1) (value "+3V3") (footprint "")
-    )
-    (path "/b75bd9b9-3a6b-4766-98aa-3c30f703f2e0/efdc2b70-d71d-4565-b070-b587ff9c968d"
-      (reference "#PWR?") (unit 1) (value "+5V") (footprint "")
     )
     (path "/af61f2eb-3376-4189-8310-620a433ef8ef/f4662e9e-a042-421d-9aa3-93a911a6004a"
       (reference "C1") (unit 1) (value "22pF") (footprint "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder")
@@ -2890,16 +2890,13 @@
       (reference "C22") (unit 1) (value "10uF") (footprint "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder")
     )
     (path "/b75bd9b9-3a6b-4766-98aa-3c30f703f2e0/01a22a1f-9a1d-4476-8b06-a16565e1505c"
-      (reference "C?") (unit 1) (value "10uF") (footprint "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder")
+      (reference "C23") (unit 1) (value "10uF") (footprint "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder")
     )
     (path "/b75bd9b9-3a6b-4766-98aa-3c30f703f2e0/5fe196ad-3c47-4dcf-812b-d926266602b6"
-      (reference "C?") (unit 1) (value "10uF") (footprint "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder")
-    )
-    (path "/b75bd9b9-3a6b-4766-98aa-3c30f703f2e0/9e6f5e6a-95e2-44a2-9d5f-2bf0262d13a0"
-      (reference "C?") (unit 1) (value "10uF") (footprint "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder")
+      (reference "C24") (unit 1) (value "10uF") (footprint "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder")
     )
     (path "/b75bd9b9-3a6b-4766-98aa-3c30f703f2e0/a43d5dce-b543-4961-b95c-4a978a724427"
-      (reference "C?") (unit 1) (value "10uF") (footprint "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder")
+      (reference "C25") (unit 1) (value "10uF") (footprint "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder")
     )
     (path "/af61f2eb-3376-4189-8310-620a433ef8ef/1d374c9e-2897-4c07-9d24-38daf6ec840d"
       (reference "D1") (unit 1) (value "1V") (footprint "Diode_SMD:D_SMB_Handsoldering")
