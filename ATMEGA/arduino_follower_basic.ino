@@ -70,11 +70,15 @@ void receiveEvent(int howMany) {
     }
 
   }
+  // digitalWrite(leftPin, LOW);
+  // digitalWrite(rightPin, LOW);
 
 }
 
 void sendEvent(){
   Wire.write(data_to_send_to_pi);
+  digitalWrite(leftPin, LOW);
+  digitalWrite(rightPin, LOW);
 }
 void loop() {
   //ultrasonic get data:
