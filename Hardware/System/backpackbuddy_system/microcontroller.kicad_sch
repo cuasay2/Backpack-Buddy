@@ -866,7 +866,6 @@
     )
   )
 
-
   (junction (at 100.33 40.64) (diameter 0) (color 0 0 0 0)
     (uuid 11c3850d-e786-48b0-af2c-ea7cbeb3ea36)
   )
@@ -1346,7 +1345,7 @@
     (uuid c867748d-255d-4a6c-be35-3e03dd8ae9be)
   )
 
-  (hierarchical_label "PD1" (shape bidirectional) (at 172.72 104.14 0)
+  (hierarchical_label "PD1{slash}SDA" (shape bidirectional) (at 172.72 104.14 0)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 0754da81-e488-4a24-8cec-68bdf84fa399)
   )
@@ -1386,7 +1385,7 @@
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 638a3a97-ddf1-41ae-8a30-552a3adc1195)
   )
-  (hierarchical_label "PD0" (shape bidirectional) (at 172.72 101.6 0)
+  (hierarchical_label "PD0{slash}SCL" (shape bidirectional) (at 172.72 101.6 0)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 753dddc3-c131-40d7-8e31-9a59a7e7eb2d)
   )
