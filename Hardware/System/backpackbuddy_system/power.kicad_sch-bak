@@ -1402,6 +1402,7 @@
     )
   )
 
+
   (junction (at 227.33 58.42) (diameter 0) (color 0 0 0 0)
     (uuid 0326ac02-bc17-4190-b3ca-341e11906f9a)
   )
@@ -2343,8 +2344,8 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid e0a0b51c-f7cd-4f62-b1f2-bbbc36f1555d))
-    (pin "2" (uuid ac55fb72-272c-49a9-9724-13433cf8099c))
     (pin "3" (uuid 744a14e0-d99f-4a08-b499-f9933b717eeb))
+    (pin "2" (uuid ac55fb72-272c-49a9-9724-13433cf8099c))
     (pin "4" (uuid 33a5052f-b594-4017-81cc-3ee7db73e81b))
   )
 
@@ -2354,7 +2355,7 @@
     (property "Reference" "TP1" (id 0) (at 82.55 40.64 0)
       (effects (font (size 1.27 1.27)) (justify bottom))
     )
-    (property "Value" "Vin_U" (id 1) (at 82.55 38.1 0)
+    (property "Value" "9V Unprotected" (id 1) (at 82.55 38.1 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Footprint" "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm" (id 2) (at 87.63 45.72 0)
@@ -2769,7 +2770,7 @@
     (property "Reference" "TP3" (id 0) (at 144.78 39.37 0)
       (effects (font (size 1.27 1.27)) (justify left top))
     )
-    (property "Value" "Vin_P" (id 1) (at 138.43 38.1 0)
+    (property "Value" "Protected 9V" (id 1) (at 138.43 38.1 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
     (property "Footprint" "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm" (id 2) (at 151.13 45.72 0)
