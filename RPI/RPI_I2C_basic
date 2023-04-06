@@ -1,0 +1,54 @@
+
+#  Raspberry Pi Master for Arduino Slave
+#  i2c_master_pi.py
+#  Connects to Arduino via I2C
+  
+#  DroneBot Workshop 2019
+#  https://dronebotworkshop.com
+import time, random
+
+from smbus import SMBus
+
+addr = 0x8 # bus address
+bus = SMBus(1) # indicates /dev/ic2-1
+
+numb = 1
+
+print ("Enter 1 for ON or 0 for OFF")
+ledstate = input(">>>>   ")
+
+def camera_process():
+    #turn on camera
+    #for now, output random integer from 1-4 (1=left, 2=right, 3=both, 4=no threat)
+    return random.randint(1,4)
+
+while(1):
+    
+	x = bus.read_byte(addr)
+	print(x)
+	#ledstate = input(">>>>   ")
+	#if received value from the bus is 1 (close), then initiate camera algorithm
+	if(x==1):
+		send_to_pi = camera_process()
+		bus.write_byte(addr, (send_to_pi))
+		print("x=1")
+		
+
+
+	if ledstate == "1":
+		#bus.write_byte(addr, 0x1) # switch it on
+		time.sleep(0.5)
+	elif ledstate == "0":
+		bus.write_byte(addr, 0x0) # switch it off
+		time.sleep(0.5)
+	#elif ledstate == "3": #for type conversion testing
+		#bus.write_byte(addr, 0x0001) # switch it on 
+	else:a
+		numb = 0
+		break;
+	
+
+    
+
+
+
