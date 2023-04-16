@@ -6,13 +6,14 @@ byte data_to_echo = 0;
 const int trigPin = 12; //PD6
 const int echoPin = 6; //PD7
 const int LED_left = 5;
-const int heartbeat_LED = 18; //PF7
+const int heartbeat_LED = A0; //PF7
 const int vibration_right = 10; //PB6
 // defines variables
 long duration;
 int distance;
 int heartbeat_counter; 
 int temp = 0;
+int heartbeatState = 0;
 
 void setup() 
 {
@@ -30,17 +31,13 @@ void setup()
 void loop() { 
 
   //Heartbeat
-  if(heartbeat_counter >= 100000 && temp == 0) {
-    heartbeat_counter = 0;
-    temp = 1;
-    digitalWrite(heartbeat_LED, HIGH);
+  if(heartbeatState == 0){
+    heartbeatState = 1;
   }
-  else if(heartbeat_counter >= 100000 && temp == 1) {
-    heartbeat_counter = 0;
-    temp = 0;
-    digitalWrite(heartbeat_LED, LOW);
+  else{
+    heartbeatState = 0;
   }
-  heartbeat_counter = heartbeat_counter + 1;
+  digitalWrite(heartbeat_LED, heartbeatState);
 
   //Ultrasonic Sensor with RPI
   digitalWrite(trigPin, LOW);
