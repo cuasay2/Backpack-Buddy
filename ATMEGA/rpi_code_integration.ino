@@ -53,40 +53,31 @@ void loop() {
   duration = pulseIn(echoPin, HIGH);
   distance = duration * 0.034 / 2;
 
-  
-  if(distance <= 30) {
-    //Close up vibration
-    if((i2c_data_byte == 1 || i2c_data_byte/10 == 1)) {
-      digitalWrite(vibration_left, 1);
-      digitalWrite(vibration_right, 0);
-    }
-    else if(i2c_data_byte == 2 || i2c_data_byte/10 == 2) {
-      digitalWrite(vibration_left, 1);
-      digitalWrite(vibration_right, 1);
-    }
-    else if(i2c_data_byte == 3 || i2c_data_byte/10 == 3) {
-      digitalWrite(vibration_left, 0);
-      digitalWrite(vibration_right, 1);
-    }
-    else {
-      digitalWrite(vibration_left, 0);
-      digitalWrite(vibration_right, 0);
-    }
+  //Close up vibration
+  if(distance <= 65) {
+    digitalWrite(vibration_left, 1);
+    digitalWrite(vibration_right, 1);
   }
+  //Far away vibration
   else {
-    //Far away vibration
     if((i2c_data_byte/10) > 0) {
-      if(vibes_counter == 0) {
-        digitalWrite(vibration_left, 1);
-        digitalWrite(vibration_right, 1);
+      if(vibes_counter < 3) {
+        if(i2c_data_byte == 10) {
+          digitalWrite(vibration_left, 1);
+          digitalWrite(vibration_right, 0);
+        }
+        else if(i2c_data_byte == 20) {
+          digitalWrite(vibration_left, 1);
+          digitalWrite(vibration_right, 1);
+        }
+        else {
+          digitalWrite(vibration_left, 0);
+          digitalWrite(vibration_right, 1);
+        }
         vibes_counter++;
       }
-      else if((i2c_data_byte/10) > 0 && vibes_counter < 5) {
-        digitalWrite(vibration_left, 1);
-        digitalWrite(vibration_right, 1);
-        vibes_counter++;
-      }
-      else if((i2c_data_byte/10) > 0 && vibes_counter >= 5 && vibes_counter < 50) {
+
+      else if(vibes_counter >= 3 && vibes_counter < 80) {
         digitalWrite(vibration_left, 0);
         digitalWrite(vibration_right, 0);
         vibes_counter++;
@@ -107,12 +98,9 @@ void loop() {
   
   //VIBRATION STATE DECLARATIONS
   //    0 - no vibrations at all
-  //    1 - vibrate left if < 50cm
-  //    2 - vibrate left and right if < 50cm
-  //    3 - vibrate right if < 50cm
-  //   10 - vibrate lightly if person detected in camera
-  //   20 - vibrate lightly if person detected in camera
-  //   30 - vibrate lightly if person detected in camera
+  //   10 - vibrate left if person detected in camera
+  //   20 - vibrate both if person detected in camera
+  //   30 - vibrate right if person detected in camera
   
   delay(100);
 
