@@ -54,9 +54,9 @@ void loop() {
   distance = duration * 0.034 / 2;
 
   
-  if(distance <= 50) {
+  if(distance <= 30) {
     //Close up vibration
-    if(i2c_data_byte == 1 || i2c_data_byte/10 == 1) {
+    if((i2c_data_byte == 1 || i2c_data_byte/10 == 1)) {
       digitalWrite(vibration_left, 1);
       digitalWrite(vibration_right, 0);
     }
@@ -76,14 +76,19 @@ void loop() {
   else {
     //Far away vibration
     if((i2c_data_byte/10) > 0) {
-      if(vibes_counter < 100) {
+      if(vibes_counter == 0) {
         digitalWrite(vibration_left, 1);
         digitalWrite(vibration_right, 1);
         vibes_counter++;
       }
-      else if((i2c_data_byte/10) > 0 && vibes_counter >= 100 && vibes_counter < 110) {
+      else if((i2c_data_byte/10) > 0 && vibes_counter < 5) {
         digitalWrite(vibration_left, 1);
         digitalWrite(vibration_right, 1);
+        vibes_counter++;
+      }
+      else if((i2c_data_byte/10) > 0 && vibes_counter >= 5 && vibes_counter < 50) {
+        digitalWrite(vibration_left, 0);
+        digitalWrite(vibration_right, 0);
         vibes_counter++;
       }
       else {
