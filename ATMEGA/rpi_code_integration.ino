@@ -5,33 +5,39 @@
 byte i2c_data_byte = 0;
 const int trigPin = 12; //PD6
 const int echoPin = 6; //PD7
-const int LED_left = 5;
+const int trigPin2 = 13; //PC7
+const int echoPin2 = 5; //PC6
 const int heartbeat_LED = A0; //PF7
 const int vibration_left = 8; //PB4
 const int vibration_right = 10; //PB6
 
 // defines variables
 long duration;
+long duration2;
 int distance;
+int distance2;
 int heartbeat_counter;
 int vibes_counter = 0; 
 int temp = 0;
 int heartbeatState = 0;
+int emergency_data = 0;
 
 void setup() 
 {
   pinMode(trigPin, OUTPUT); // Sets the trigPin as an Output
   pinMode(echoPin, INPUT); // Sets the echoPin as an Input
+  pinMode(trigPin2, OUTPUT); // Sets the trigPin as an Output
+  pinMode(echoPin2, INPUT); // Sets the echoPin as an Input
   pinMode(heartbeat_LED, OUTPUT);
-  pinMode(LED_left, OUTPUT);
   pinMode(vibration_right, OUTPUT);
   Serial.begin(9600); // Starts the serial communication
   Wire.begin(SLAVE_ADDRESS);
   Wire.onReceive(receiveData);
-  //Wire.onRequest(sendData);
+  Wire.onRequest(sendData);
 }
 
 void loop() { 
+  emergency_data = 0; //reset emergency stat
 
   //Heartbeat
   if(heartbeatState == 0){
@@ -53,10 +59,31 @@ void loop() {
   duration = pulseIn(echoPin, HIGH);
   distance = duration * 0.034 / 2;
 
+  //send emergency signal to rpi
+  if(distance <= 35) {
+    emergency_data = 1;
+  }
+
   //Close up vibration
   if(distance <= 65) {
-    digitalWrite(vibration_left, 1);
-    digitalWrite(vibration_right, 1);
+    if(i2c_data_byte == 10) {
+        digitalWrite(vibration_left, 1);
+        digitalWrite(vibration_right, 0);
+      }
+      else if(i2c_data_byte == 20) {
+        digitalWrite(vibration_left, 1);
+        digitalWrite(vibration_right, 1);
+      }
+      else if(i2c_data_byte == 30) {
+        digitalWrite(vibration_left, 0);
+        digitalWrite(vibration_right, 1);
+      }
+      else {
+        digitalWrite(vibration_left, 1);
+        digitalWrite(vibration_right, 1);
+      }
+    // digitalWrite(vibration_left, 1);
+    // digitalWrite(vibration_right, 1);
   }
   //Far away vibration
   else {
@@ -116,7 +143,7 @@ void receiveData(int bytecount)
   // Serial.println(i2c_data_byte);
 }
 
-// void sendData()
-// {
-//   Wire.write(i2c_data_byte);
-// }
+void sendData()
+{
+  Wire.write(emergency_data);
+}
